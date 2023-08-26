@@ -3,13 +3,14 @@ class Question
   attr_reader :problem, :total
   
   def initialize
-    val1 = rand(1..20)
-    val2 = rand(1..20)
-    @problem = "What does #{val1} plus #{val2} equal?"
-    @total = val1 + val2
+    val1 = rand(1..20) # random 1 to 20
+    val2 = rand(1..20) # random 1 to 20
+    @problem = "What does #{val1} plus #{val2} equal?" # The main question
+    @total = val1 + val2 # set the total value for comparison to answer
   end
 
   def check_answer(answer)
-    answer.to_i == @total
+    # Check player's answer and return true or false
+    answer.to_i == @total # Convert to integer from input
   end
 end
