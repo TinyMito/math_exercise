@@ -1,7 +1,6 @@
 class Player # Store player information and method to update player stats
   # Setter and Getter :lives to keep track scores
   # Initialize: player start with 3 @lives by default
-  # Method: "reduce_life" for answering wrong => remove 1 live from @lives
 end
 
 class Question # Generate math problem with value between 1 to 20
@@ -17,7 +16,7 @@ class Game # Runtime (loop) logic of the game, switching between two players, Ga
   # @current_player would start with object player1
   # @loser if one lower is true default false
   # Method: "begin_game" the game with first question for player1, call the Math.new
-  # gets.chomp for player input
+  # gets.chomp for player input and answering wrong => remove 1 live from @lives
   # condition check player answer if true or false, if false call player1 method to move 1 live
   # Method: "display_score" to display both players lives left. ie. "P1: 3/3 vs P2: 3/3"
   # Method: "switch" turn base condition if current player1 = player1 then switch to player2

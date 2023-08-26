@@ -14,7 +14,7 @@ class Game
       puts "Correct"
     else
       puts "Incorrect"
-      @current_player.reduce_life
+      puts @current_player.lives -= 1
     end
 
   end
