@@ -4,7 +4,7 @@ class Player # Store player information and method to update player stats
   # Method: "reduce_life" for answering wrong => remove 1 live from @lives
 end
 
-class Math # Generate math problem with value between 1 to 20
+class Question # Generate math problem with value between 1 to 20
   # Setter and Getter :problem :total
   # Initialize: random 1 to 20 for val1 and val2
   # @problem "What does #{val1} plus #{val2} equal?"
