@@ -21,7 +21,7 @@ class Game
 
       puts "#{self.current_player.name}: #{problem.problem}" # Output question
  
-      if problem.check_answer(gets.chomp)
+      if problem.check_answer(gets.chomp) # Check user input value return correct TRUE or incorrect FALSE
         puts "#{self.current_player.name} YES! You are correct."
       else
         puts "#{self.current_player.name}: Seriously? No!"
