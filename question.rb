@@ -11,6 +11,6 @@ class Question
 
   def check_answer(answer)
     # Check player's answer and return true or false
-    answer.to_i == total # Convert to integer from input
+    answer.to_i == self.total # Convert to integer from input
   end
 end
