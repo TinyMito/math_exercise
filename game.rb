@@ -29,8 +29,11 @@ class Game
 
       @new_game = false
 
-      if check_deadplayer # call method check_deadplayer true or false
+      check_deadplayer # call method check_deadplayer true or false
+      
+      if @game_over # if true, stop the loop
         break
+      end
       
     end
 
@@ -43,7 +46,7 @@ class Game
 
   def check_deadplayer
     if @player1.lives <= 2 || @player2.lives <= 2
-      @game_over
+      @game_over = true # update variable to true the game is over once this statement met
     end
   end
 
