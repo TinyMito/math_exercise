@@ -6,4 +6,8 @@ class Player
     @name = p # set player name
     @lives = 3 # default 3 lives
   end
+
+  def reduce_life
+    @lives -= 1
+  end
 end
