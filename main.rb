@@ -9,5 +9,6 @@ p2 = Player.new("Player 2")
 # Create new game instance
 game1 = Game.new(p1, p2)
 
-# Test
-random = Question.new
+# Test Codes
+#random = Question.new
+game1.begin_game
