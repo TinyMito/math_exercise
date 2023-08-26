@@ -16,8 +16,7 @@ class Game
       end
 
       puts "#{@current_player.name}: #{problem.problem}" # Output question
-      puts problem.total # Test Answer Only
-
+ 
       if problem.check_answer(gets.chomp)
         puts "#{@current_player.name} YES! You are correct."
       else
