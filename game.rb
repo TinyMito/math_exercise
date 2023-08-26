@@ -27,9 +27,13 @@ class Game
 
       puts "P1: #{@player1.lives}/3 vs P2: #{@player2.lives}/3"
 
-      @new_game = false
+      
 
       check_deadplayer # call method check_deadplayer true or false
+
+      switch # call method to switch player turn
+
+      @new_game = false # set to false after game started for message puts
       
       if @game_over # if true, stop the loop
         break
@@ -45,9 +49,7 @@ class Game
   end
 
   def check_deadplayer
-    if @player1.lives <= 2 || @player2.lives <= 2
-      @game_over = true # update variable to true the game is over once this statement met
-    end
+    @game_over = (@player1.lives <= 2 || @player2.lives <= 2) ? true : false # update variable to true the game is over once this statement met
   end
 
   def winner
@@ -55,5 +57,6 @@ class Game
   end
 
   def switch
+    @current_player = (@current_player == @player1) ? @player2 : @player1 # switch player if current_player match the first player
   end
 end
