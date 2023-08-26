@@ -24,7 +24,7 @@ class Game
         @current_player.lives -= 1
       end
 
-      display_score # display results
+      display_score # call method display results
       check_deadplayer # call method check_deadplayer true or false
       switch # call method to switch player turn
       @new_game = false # set to false after game started for message puts
