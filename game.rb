@@ -50,6 +50,6 @@ class Game
   end
 
   def winner
-    puts "someone won"
+    puts "#{@current_player.name} wins with a score of #{@current_player.lives}/3"
   end
 end
