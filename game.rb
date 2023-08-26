@@ -35,6 +35,8 @@ class Game
       end
     end
     winner # call method game_over
+    puts "----- GAME OVER -----"
+    puts "Good bye!"
   end
 
   def switch
