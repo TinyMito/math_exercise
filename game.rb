@@ -6,15 +6,21 @@ class Game
   end
 
   def begin_game
-    problem = Question.new
-    puts problem.problem
-    puts problem.total
+    loop do
+      problem = Question.new
 
-    if problem.check_answer(gets.chomp)
-      puts "Correct"
-    else
-      puts "Incorrect"
-      puts @current_player.lives -= 1
+      puts "----- NEW TURN -----"
+      puts problem.problem # Output question
+      puts problem.total # Test Answer Only
+
+      if problem.check_answer(gets.chomp)
+        puts "Correct"
+      else
+        puts "#{@current_player.name}: Incorrect"
+        @current_player.lives -= 1
+      end
+
+      puts "P1: #{@player1.lives}/3 vs P2: #{@player2.lives}/3"
     end
 
   end
