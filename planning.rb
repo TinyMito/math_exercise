@@ -20,7 +20,7 @@ class Game # Runtime (loop) logic of the game, switching between two players, Ga
   # condition check player answer if true or false, if false call player1 method to move 1 live
   # Method: "display_score" to display both players lives left. ie. "P1: 3/3 vs P2: 3/3"
   # Method: "switch" turn base condition if current player1 = player1 then switch to player2
-  # Method: "game_over" output the winner
+  # Method: "winner" output the winner
   # Method: "check_deadplayer" check player lives hit 0 => if true
 end
 
