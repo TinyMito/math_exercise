@@ -37,7 +37,7 @@ class Game
       
     end
 
-    game_over # call method game_over
+    winner # call method game_over
 
   end
 
@@ -50,7 +50,7 @@ class Game
     end
   end
 
-  def game_over
+  def winner
     puts "someone won"
   end
 
