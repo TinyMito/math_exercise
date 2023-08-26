@@ -15,13 +15,13 @@ class Game
         puts "----- NEW TURN -----"
       end
 
-      puts problem.problem # Output question
+      puts "#{@current_player.name}: #{problem.problem}" # Output question
       puts problem.total # Test Answer Only
 
       if problem.check_answer(gets.chomp)
-        puts "Correct"
+        puts "#{@current_player.name} YES! You are correct."
       else
-        puts "#{@current_player.name}: Incorrect"
+        puts "#{@current_player.name}: Seriously? No!"
         @current_player.lives -= 1
       end
 
