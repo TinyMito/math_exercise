@@ -6,5 +6,14 @@ class Game
 
   def begin_game
     problem = Question.new
+    puts problem.problem
+    puts problem.total
+
+    if problem.check_answer(gets.chomp)
+      puts "Correct"
+    else
+      puts "Incorrect"
+    end
+
   end
 end
