@@ -3,13 +3,18 @@ class Game
     @player1 = p1
     @player2 = p2
     @current_player = @player1
+    @new_game = true
+    @game_over = false
   end
 
   def begin_game
-    loop do
+    loop do #simple loop infinite
       problem = Question.new
 
-      puts "----- NEW TURN -----"
+      if !@new_game
+        puts "----- NEW TURN -----"
+      end
+
       puts problem.problem # Output question
       puts problem.total # Test Answer Only
 
@@ -21,7 +26,31 @@ class Game
       end
 
       puts "P1: #{@player1.lives}/3 vs P2: #{@player2.lives}/3"
+
+      @new_game = false
+
+      if check_deadplayer # call method check_deadplayer true or false
+        break
+      
     end
 
+    game_over # call method game_over
+
+  end
+
+  def display_score
+  end
+
+  def check_deadplayer
+    if @player1.lives <= 2 || @player2.lives <= 2
+      @game_over
+    end
+  end
+
+  def game_over
+    puts "someone won"
+  end
+
+  def switch
   end
 end
